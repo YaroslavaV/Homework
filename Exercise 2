@@ -1,0 +1,27 @@
+/**
+ * The class finds the semi-perimeter of the triangle after which its area.
+ * 
+ * Version 1.0
+ * 
+ * Yaroslava Bezuhla
+ */
+
+package com.gmail.thepowerofyar;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		double a = 0.3;
+		double b = 0.4;
+		double c = 0.5;
+
+		double p = 0.5 * (a + b + c);
+		System.out.println("p =" + p);
+
+		double S = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+		System.out.println("S = " + S);
+
+	}
+
+}
