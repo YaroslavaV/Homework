@@ -1,0 +1,25 @@
+/**
+ * The class reads the radius of the circle from the keyboard, 
+ * counts its length and displays the value on the screen.
+ * 
+ * Version 1.0
+ * 
+ * Yaroslava Bezuhla
+ */
+
+package com.gmail.thepowerofyar;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter the radius of the circle!");
+		int rad = sc.nextInt();
+
+		System.out.println("C = " + 2 * Math.PI * rad);
+	}
+
+}
