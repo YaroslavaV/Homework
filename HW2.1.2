@@ -1,0 +1,39 @@
+/**
+ * It reads the apartment number from the keyboard 
+ * and displays the entrance and floor of this apartment.
+ * 
+ * Version 1.0
+ * 
+ * Creator of Yaroslava 
+ */
+package com.gmail.thepowerofyar;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int ap;
+		System.out.println("Местоположение какой квартиры Вас интересует?");
+		ap = sc.nextInt();
+
+		if (ap >= 1 && ap <= 144) {
+			int entrance;
+			entrance = (ap - 1) / 36;
+			entrance++;
+
+			int floor;
+			floor = (ap - 1) % 36 / 4;
+			floor++;
+
+			System.out.println("Вам нужен " + entrance + "й подъезд и " + floor + ("й этаж"));
+		} else {
+			System.out.println("Такой квартиры в этом доме нет!");
+		}
+
+	}
+
+}
