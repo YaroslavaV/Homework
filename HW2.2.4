@@ -1,0 +1,36 @@
+/**
+ * The program reads the value from the keyboard
+ *  and determines whether it is a palindrome or not.
+ * 
+ * creator of Yaroslava
+ */
+
+package com.gmail.thepowerofyar;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int pal;
+		System.out.println("Введите шестизначное число");
+		pal = sc.nextInt();
+
+		if (pal < 100000 || pal >= 1000000) {
+			System.out.println("Число должно быть шестизначным!");
+
+		} else {
+			if (pal / 100000 == pal % 10 && pal % 100000 / 10000 == pal % 100 / 10
+					&& pal % 10000 / 1000 == pal % 1000 / 100) {
+				System.out.println("Число является палиндромом!");
+			} else {
+				System.out.println("Число не является палиндромом!");
+			}
+
+		}
+
+	}
+}
