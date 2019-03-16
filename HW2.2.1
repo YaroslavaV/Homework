@@ -1,0 +1,40 @@
+/**
+ * The program reads the coordinates of the point from the keyboard 
+ * and displays information about whether the point is in a circle or not.
+ * 
+ * creator of Yaroslava
+ */
+
+package com.gmail.thepowerofyar;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int r = 4;
+		double xN = 0.0;
+		double yN = 0.0;
+
+		double x;
+		System.out.println("Введите координаты точки x");
+		x = sc.nextDouble();
+
+		double y;
+		System.out.println("Введите координаты точки y");
+		y = sc.nextDouble();
+
+		double coordinates = Math.sqrt((x - xN) * (x - xN) + (y - yN) * (y - yN));
+
+		if (coordinates < r && coordinates > -r) {
+			System.out.println("Точка лежит внутри круга");
+		} else {
+			System.out.println("Точка не входит в круг");
+			sc.close();
+		}
+
+	}
+
+}
