@@ -1,0 +1,47 @@
+/**
+ * The program reads the coordinates of the point from the keyboard 
+ * and determines whether it belongs to the triangle or not.
+ * 
+ * creator of Yaroslava
+ */
+
+package com.gmail.thepowerofyar;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		double xA = 0;
+		double yA = 0;
+		double xB = 4;
+		double yB = 4;
+		double xC = 6;
+		double yC = 1;
+
+		double x;
+		System.out.println("Введите координаты точки x");
+		x = sc.nextDouble();
+
+		double y;
+		System.out.println("Введите координаты точки y");
+		y = sc.nextDouble();
+
+		double pointA = (xA - x) * (yB - yA) - (xB - xA) * (yA - y);
+		double pointB = (xB - x) * (yC - yB) - (xC - xB) * (yB - y);
+		double pointC = (xC - x) * (yA - yC) - (xA - xC) * (yC - y);
+
+		if ((pointA >= 0 && pointB >= 0 && pointC >= 0) || (pointA <= 0 && pointB <= 0 && pointC <= 0)) {
+
+			System.out.println("Точка принадлежит треугольнику");
+		} else {
+			System.out.println("Точка не принадлежит треугольнику");
+			sc.close();
+		}
+
+	}
+
+}
