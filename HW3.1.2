@@ -1,0 +1,36 @@
+/**
+ * The program reads the number from the keyboard and displays the factorial of that number.
+ * 
+ * creator of Yaroslava 
+ */
+
+package com.gmail.thepowerofyar;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int a;
+		System.out.println("Введите целое число. Число должно быть больше 4, но меньше 16!");
+		a = sc.nextInt();
+
+		long n = 1;
+
+		if (4 < a && a < 16) {
+			for (int i = 1; i <= a; i++) {
+				n *= i;
+			}
+			System.out.println(n);
+
+		} else {
+			System.out.println("Ошибка!");
+			sc.close();
+		}
+
+	}
+
+}
