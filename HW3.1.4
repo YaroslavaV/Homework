@@ -1,0 +1,47 @@
+/**
+ * The program reads the size of the rectangle from the keyboard, 
+ * checks the correctness of the entered data, 
+ * and if everything correctly displays the rectangle on the screen.
+ * 
+ * creator of Yaroslava
+ */
+
+package thepowerofyar;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int h;
+		System.out.println("Введите высоту прямоугольника");
+		h = sc.nextInt();
+
+		int s;
+		System.out.println("Введите ширину прямоугольника");
+		s = sc.nextInt();
+
+		if (h == s) {
+			System.out.println("Должен быть прямоугольник, а не квадрат!");
+		} else {
+
+			for (int i = 0; i < h; i++) {
+				for (int j = 0; j < s; j++) {
+					if (i == 0 || i == h - 1) {
+						System.out.print("*");
+					} else if (j == 0 || j == s - 1) {
+						System.out.print("*");
+					} else {
+						System.out.print(" ");
+					}
+
+				}
+				System.out.println();
+				sc.close();
+			}
+		}
+	}
+
+}
