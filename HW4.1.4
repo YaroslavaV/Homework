@@ -1,0 +1,33 @@
+/**
+ * The program counts the number of characters 'b'
+ * 
+ * creator of Yaroslava
+ */
+
+package com.gmail.thepowerofyar;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		String t;
+		System.out.println("Введите текст ");
+		t = sc.nextLine();
+
+		char[] a = t.toCharArray();
+		int s = 0;
+
+		for (int i = 0; i < t.length(); i++) {
+			if (a[i] == 'b') {
+				s++;
+				// System.out.println(s);
+			}
+		}
+		System.out.println(s);
+		sc.close();
+	}
+
+}
