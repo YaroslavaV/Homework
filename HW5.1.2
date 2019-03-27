@@ -1,0 +1,37 @@
+package com.gmail.thepowerofyar;
+
+import java.util.Scanner;
+
+public class Main {
+
+	/**
+	 * The method returns the concatenation of a string with the sum of an integer
+	 * and a real number.
+	 * 
+	 * @param a <code> int </code> value.
+	 * @param b <code> double </code> value
+	 * @param t <code> String </code> value.
+	 * @return <code> String </code> value.
+	 * @author Yaroslava
+	 */
+
+	public static String kate(int a, double b, String t) {
+		double x = a + b;
+		String y = x + t;
+
+		return y;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Введите целое число");
+		int a = sc.nextInt();
+		System.out.println("Введите вещественное число");
+		double b = sc.nextDouble();
+		System.out.println("Введите строку");
+		String s = sc.next();
+
+		System.out.println(kate(a, b, s));
+	}
+
+}
