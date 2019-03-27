@@ -1,0 +1,31 @@
+package com.gmail.thepowerofyar;
+
+import java.util.Scanner;
+
+public class Main {
+
+	/**
+	 * The method breaks a string into parts, as a separator space.
+	 * 
+	 * @param text <code> string </code>
+	 * @return <code> int </code> value.
+	 * @author Yaroslava
+	 */
+
+	public static int quantityS(String text) {
+
+		String[] word = text.split(" ");
+		return word.length;
+	}
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Input Text");
+		String text = sc.nextLine();
+
+		System.out.println(quantityS(text));
+		sc.close();
+	}
+
+}
