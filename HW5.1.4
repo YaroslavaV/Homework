@@ -1,0 +1,41 @@
+package com.gmail.thepowerofyar;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+	/**
+	 * The method returns the index of the number if it is in an array.
+	 * 
+	 * @param a <code> int[] </code> value. Array.
+	 * @param s <code> int </code> value. The number to find.
+	 * @param h <code> int </code> value. Stores the index number.
+	 * @return <code> int </code> value. Returns the index of the item.
+	 * @author Yaroslava.
+	 */
+
+	public static int arraySize(int[] a, int s, int h) {
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] == s) {
+				h = i;
+				break;
+			}
+		}
+		return h;
+	}
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Введите знчение");
+		int s = sc.nextInt();
+
+		int[] a = {1, 2, 3, 4, 5, 25, 100, 99, 15, 35, 125 };
+		System.out.println(Arrays.toString(a));
+
+		System.out.println("Индекс элемента: " + arraySize(a, s, -1));
+
+	}
+
+}
