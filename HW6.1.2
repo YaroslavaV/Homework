@@ -1,0 +1,62 @@
+package com.gmail.thepowerofyar;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+	/**
+	 * The method creates an array with random numbers from 1 to 1000
+	 * 
+	 * @param a <code> int[] </code> value.
+	 * @return <code> int[] </code> value.
+	 * @author Yaroslava
+	 */
+
+	public static int[] arrRan(int[] a) {
+
+		Random rn = new Random();
+
+		for (int i = 0; i < a.length; i++) {
+			a[i] = 0 + rn.nextInt(1000);
+		}
+		return a;
+	}
+
+	/**
+	 * The method converts an array into a string and displays it.
+	 * 
+	 * @param b <code> int[] </code> value.
+	 * @return <code> String </code> value.
+	 * @author Yaroslava
+	 */
+
+	public static String newAr(int[] b) {
+		StringBuilder sb = new StringBuilder();
+		String s = "";
+		for (int j = 0; j < b.length; j++) {
+			if (j == b.length - 1) {
+				s = s + b[j];
+			} else {
+				s = s + b[j] + ",";
+			}
+			sb.append(s);
+		}
+
+		System.out.println("[" + s + "]");
+
+		return s;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Введите количество элементов массива");
+		int a = sc.nextInt();
+		int[] b = new int[a];
+
+		arrRan(b);
+		newAr(b);
+
+	}
+
+}
