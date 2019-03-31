@@ -1,0 +1,38 @@
+/**
+ * The program counts how many milliseconds have passed a month before the current date.
+ * 
+ * creator of Yaroslava
+ */
+
+package com.gmail.thepowerofyar;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Date date = new Date();
+		Calendar cl = Calendar.getInstance();
+		cl.getTime();
+
+		int dayY = cl.get(Calendar.YEAR);
+		int dayM = cl.get(Calendar.MONTH);
+		int dayD = cl.get(Calendar.DAY_OF_MONTH);
+
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(dayY, dayM - 1, dayD);
+		Date calendA = calendar.getTime();
+
+		long timeT = date.getTime();
+		long timeY = calendar.getTimeInMillis();
+		long ms = timeT - timeY;
+
+		System.out.println(date);
+		System.out.println(calendA);
+		System.out.println(timeT + " - " + timeY + " = " + ms);
+
+	}
+
+}
